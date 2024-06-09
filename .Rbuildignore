@@ -1,0 +1,5 @@
+^renv$
+^renv\.lock$
+^unriddle\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$

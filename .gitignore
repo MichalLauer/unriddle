@@ -1,0 +1,6 @@
+.Rproj.user
+
+# renv files
+.Rprofile
+renv/
+renv.lock
