@@ -36,17 +36,16 @@ devtools::install_github("MichalLauer/unriddle")
 To enable this package, it only needs to be loaded at the beggining of you
 quarto document.
 
-```yml
+````yml
 ---
 title: My super-duper presentation
 author: Michal Lauer
 format: revealjs
 ---
-\```{r }
+```\{r \}
 library(unriddle)
-\```
-
 ```
+````
 
 To unriddle a code chunk, two assumptions must be met.
 
