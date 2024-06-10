@@ -33,6 +33,9 @@ title: My super-duper presentation
 author: Michal Lauer
 format: revealjs
 ---
+\```{r }
+library(unriddle)
+\```
 ```
 
 To unriddle a code chunk, two assumptions must be met.
