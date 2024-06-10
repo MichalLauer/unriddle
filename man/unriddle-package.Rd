@@ -2,7 +2,6 @@
 % Please edit documentation in R/unriddle-package.R
 \docType{package}
 \name{unriddle-package}
-\alias{unriddle}
 \alias{unriddle-package}
 \title{unriddle: What the Package Does (One Line, Title Case)}
 \description{
