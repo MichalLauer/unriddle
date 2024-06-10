@@ -33,7 +33,7 @@ title: My super-duper presentation
 author: Michal Lauer
 format: revealjs
 ---
-```\{r \}
+```{r}
 library(unriddle)
 ```
 ````
