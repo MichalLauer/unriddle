@@ -73,13 +73,6 @@ To `unriddle` a code chunk, two assumptions must be met.
 You can then add custom `#break` comments to split your chunk into multiple
 slides. A brief showcase can be seen here.
 
-## Goals
-
-- [ ] Add `#rotate` possibility
-- [ ] create `unriddle::unriddle(...)` for recommended settings, such as
-  - full width
-  - custom css
-
 # Acknowledgements
 
 First, I want to thank to my precious girlfriend [Terezka](https://github.com/tertomas)
