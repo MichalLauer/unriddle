@@ -36,14 +36,12 @@ devtools::install_github("MichalLauer/unriddle")
 To enable this package, it only needs to be loaded at the beggining of you
 quarto document.
 
-```
+```yml
 ---
 title: My super-duper presentation
 author: Michal Lauer
 format: revealjs
-\`\`\`{r }
-library(unriddle)
-\`\`\`
+---
 ```
 
 To unriddle a code chunk, two assumptions must be met.
@@ -53,17 +51,3 @@ To unriddle a code chunk, two assumptions must be met.
 
 You can then add custom `#break` comments to split your chunk into multiple
 slides. A brief showcase can be seen <span style="color: red">here</red>.
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
