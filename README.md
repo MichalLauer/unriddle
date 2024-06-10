@@ -33,10 +33,28 @@ title: My super-duper presentation
 author: Michal Lauer
 format: revealjs
 ---
-```{r}
+```{r include=F, message=F, warning=F}
 library(unriddle)
 ```
 ````
+
+After that, unriddling can be enabled! For example, consider the
+following code:
+
+```` r
+```{r mtcars-plot, unriddle=TRUE}
+mtcars |> #break 
+  ggplot(aes(x = factor(cyl), y = disp)) +
+  geom_col() + #break
+  theme_bw()
+```
+````
+
+This will create three different slides. On the first one, only `mtcars`
+will be showed. The second slide adds the `geom_col` layer, and finally,
+the third one shows the chart with additional `theme_bw`.
+
+## Assumptions
 
 To unriddle a code chunk, two assumptions must be met.
 
@@ -46,3 +64,17 @@ To unriddle a code chunk, two assumptions must be met.
 You can then add custom `#break` comments to split your chunk into
 multiple slides. A brief showcase can be seen
 <span style="color: red">here</red>.
+
+# Acknowledgements
+
+First, I want to thanks to my precious girlfriend
+[Tereza](https://github.com/tertomas) who allows me to stay up all night
+doing nerdy stuff.
+
+Secondly, this package is primarily inspired by the
+[flipbookr](https://github.com/EvaMaeRey/flipbookr) package that does
+basically the same thing. When building this package, I tried to
+leverage more the strengths of the knitr package as well as some
+javascript. Hopefully, this will make contributing easier as the
+complexity of this package is (in my opinion) much smaller. However,
+props to Eva for making the original stuff!
