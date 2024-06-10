@@ -25,7 +25,7 @@ devtools::install_github("MichalLauer/unriddle")
 ## How to use
 
 To enable this package, it only needs to be loaded at the beggining of
-you quarto document.
+you quarto reveal.js presentation.
 
 ```` yml
 ---
@@ -38,8 +38,8 @@ library(unriddle)
 ```
 ````
 
-After that, unriddling can be enabled! For example, consider the
-following code:
+After that, unriddling can be easily enabled using chunk parameters. For
+example, consider the following code:
 
 ```` r
 ```{r mtcars-plot, unriddle=TRUE}
@@ -68,8 +68,8 @@ multiple slides. A brief showcase can be seen
 # Acknowledgements
 
 First, I want to thanks to my precious girlfriend
-[Tereza](https://github.com/tertomas) who allows me to stay up all night
-doing nerdy stuff.
+[Terezka](https://github.com/tertomas) who allows me to stay up all
+night doing nerdy stuff.
 
 Secondly, this package is primarily inspired by the
 [flipbookr](https://github.com/EvaMaeRey/flipbookr) package that does
