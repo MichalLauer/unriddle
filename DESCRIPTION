@@ -1,10 +1,13 @@
 Package: unriddle
-Title: What the Package Does (One Line, Title Case)
+Title: Unriddle Complicated Code within a reveal.js Quarto Presentation
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Michal", "Lauer", ,"michal.lauer.25@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-3294-771X"))
+Description: Helpfull package for presentators who want to explain their code
+    line-by-line. This package enables you to add simple comment breaks into your 
+    quarto chunks, which will then break-up your slide into multiple slides that
+    are split line-by-line with the resulting code printed on side.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -15,4 +18,6 @@ Imports:
     knitr,
     utils
 Suggests: 
-    devtools
+    devtools,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

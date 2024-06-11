@@ -1,13 +1,16 @@
-unr_chunk <- function(code, name, chunk_opts=list(echo=FALSE)) {
-  assert_vector(code)
+#' Unriddle a single chunk
+#'
+#' Given a vector of code lines, return a list where each item represents the
+#' formatted code using [unr_chunk_code] split by #break. Parameters
+#' **echo=TRUE** and **output-location: column** are also appended.
+#'
+#' @param code Vector of codes
+#' @param name Name of the caller
+#'
+#' @return List of formatted code chunks
+unr_chunk <- function(code, name) {
+  assert_character(code)
   assert_string(name)
-  assert_list(chunk_opts, null.ok = TRUE)
-
-  ops <- NULL
-  if (length(chunk_opts) > 0) {
-    ops <- paste0(names(chunk_opts), "=", chunk_opts, collapse = ", ")
-    ops <- paste(",", ops)
-  }
 
   footer <- "```\n"
   id <- 0

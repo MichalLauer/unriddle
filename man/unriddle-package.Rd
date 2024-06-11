@@ -2,14 +2,13 @@
 % Please edit documentation in R/unriddle-package.R
 \docType{package}
 \name{unriddle-package}
-\alias{unriddle}
 \alias{unriddle-package}
-\title{unriddle: What the Package Does (One Line, Title Case)}
+\title{unriddle: Unriddle Complicated Code within a reveal.js Quarto Presentation.}
 \description{
-What the package does (one paragraph).
+Helpfull package for presentators who want to explain their code line-by-line. This package enables you to add simple comment breaks into your quarto chunks, which will then break-up your slide into multiple slides that are split line-by-line with the resulting code printed on side.
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Michal Lauer \email{michal.lauer.25@gmail.com} (\href{https://orcid.org/0000-0003-3294-771X}{ORCID})
 
 }
 \keyword{internal}
