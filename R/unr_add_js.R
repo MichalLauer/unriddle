@@ -26,7 +26,12 @@ unr_add_js <- function(code, name) {
   header <- paste0("```{js ", name, "-js}")
   body <- c(
     "var mainDiv = document.currentScript.parentElement.parentElement;",
-    "mainDiv.removeChild(mainDiv.querySelector('.cell-output-display'))",
+    "if (mainDiv.querySelector(':scope > .cell-output-display')) {",
+    "  mainDiv.removeChild(mainDiv.querySelector('.cell-output-display'));",
+    "}",
+    "if (mainDiv.querySelector(':scope > .cell-output')) {",
+    "  mainDiv.removeChild(mainDiv.querySelector('.cell-output'));",
+    "}",
     "var sectionParent = mainDiv.closest('section');",
     "var childDivs = Array.from(mainDiv.querySelectorAll('.columns'));",
     "var n = childDivs.length;",
