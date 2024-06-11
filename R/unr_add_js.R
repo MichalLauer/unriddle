@@ -16,7 +16,7 @@
 #' 4) refreshes Reveal.js.
 #'
 #' Additional chunk parameters that are handled using javascript are also
-#' parsed. Full list can be found inside [unr_code_options].
+#' parsed. Full list can be found inside [unr_code_options_child].
 #'
 #' @param code Knitted chunks of code
 #' @param name Name of the caller

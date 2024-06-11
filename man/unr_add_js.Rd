@@ -35,6 +35,6 @@ structure within the main chunk. The number of newly created chunks is
 }
 
 Additional chunk parameters that are handled using javascript are also
-parsed. Full list can be found inside \link{unr_code_options}.
+parsed. Full list can be found inside \link{unr_code_options_child}.
 }
 
