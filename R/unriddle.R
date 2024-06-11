@@ -11,6 +11,17 @@
 #'
 #' @return None
 unriddle <- function(before, options, envir, name, ...) {
+  if (tolower(options$unriddle) != "true") {
+    inform(paste0("Chunk ", col_blue(options$label), ":"),
+           body = paste0("Parameter ", col_black("unriddle"), " is not set to ",
+                          col_green("true"), "/", col_green("TRUE"), ". ",
+                         "In such cases, it is not really needed."),
+           use_cli_format = T,
+           .frequency = "once",
+           .frequency_id = "invalid_chunk_parameter")
+    return(NULL)
+  }
+
   if (!before) {
     input <- unr_chunk(code=options$code,
                        name=options$label)

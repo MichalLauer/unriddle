@@ -2,6 +2,9 @@
 "_PACKAGE"
 
 ## usethis namespace: start
+#' @importFrom cli col_black
+#' @importFrom cli col_blue
+#' @importFrom cli col_green
 #' @importFrom htmltools HTML
 #' @importFrom htmltools tags
 #' @importFrom checkmate assert_character
@@ -9,6 +12,7 @@
 #' @importFrom checkmate assert_list
 #' @importFrom checkmate assert_string
 #' @importFrom checkmate assert_vector
+#' @importFrom rlang inform
 #' @importFrom utils capture.output
 ## usethis namespace: end
 NULL

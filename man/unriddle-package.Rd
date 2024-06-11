@@ -3,7 +3,7 @@
 \docType{package}
 \name{unriddle-package}
 \alias{unriddle-package}
-\title{unriddle: Unriddle Complicated Code within a reveal.js Quarto Presentation.}
+\title{unriddle: Unriddle Complicated Code within a reveal.js Quarto Presentation}
 \description{
 Helpfull package for presentators who want to explain their code line-by-line. This package enables you to add simple comment breaks into your quarto chunks, which will then break-up your slide into multiple slides that are split line-by-line with the resulting code printed on side.
 }
