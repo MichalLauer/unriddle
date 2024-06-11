@@ -4,12 +4,14 @@
 \alias{unr_add_js}
 \title{Append knitted JS code}
 \usage{
-unr_add_js(code, name)
+unr_add_js(code, name, options)
 }
 \arguments{
 \item{code}{Knitted chunks of code}
 
 \item{name}{Name of the caller}
+
+\item{options}{Chunk options}
 }
 \value{
 knitted JS code, appended to the original code
@@ -31,5 +33,8 @@ structure within the main chunk. The number of newly created chunks is
 \item removes the original slide, and
 \item refreshes Reveal.js.
 }
+
+Additional chunk parameters that are handled using javascript are also
+parsed. Full list can be found inside \link{unr_code_options}.
 }
 

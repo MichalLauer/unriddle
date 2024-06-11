@@ -15,13 +15,18 @@
 #' 3) removes the original slide, and
 #' 4) refreshes Reveal.js.
 #'
+#' Additional chunk parameters that are handled using javascript are also
+#' parsed. Full list can be found inside [unr_code_options].
+#'
 #' @param code Knitted chunks of code
 #' @param name Name of the caller
+#' @param options Chunk options
 #'
 #' @return knitted JS code, appended to the original code
-unr_add_js <- function(code, name) {
+unr_add_js <- function(code, name, options) {
   assert_string(code)
   assert_string(name)
+  assert_list(options)
 
   header <- paste0("```{js ", name, "-js}")
   body <- c(
@@ -42,6 +47,8 @@ unr_add_js <- function(code, name) {
     "  Array.from(childDivsClone).forEach((child, index) => {",
     "    if (index !== i) {",
     "      mainDivClone.removeChild(child);",
+    "    } else {",
+    unr_code_options_child(options),
     "    }",
     "  });",
     "  if (sectionClone.id) {",

@@ -12,9 +12,8 @@
 #' @return None
 unriddle <- function(before, options, envir, name, ...) {
   if (tolower(options$unriddle) != "true") {
-    inform(paste0("Chunk ", col_blue(options$label), ":"),
-           body = paste0("Parameter ", col_black("unriddle"), " is not set to ",
-                          col_green("true"), "/", col_green("TRUE"), ". ",
+    inform(paste0("Chunk ", options$label, ":"),
+           body = paste0("Parameter 'unriddle' is not set to true.",
                          "In such cases, it is not really needed."),
            use_cli_format = T,
            .frequency = "once",
@@ -30,7 +29,8 @@ unriddle <- function(before, options, envir, name, ...) {
     })
     joined <- paste0(output, collapse = "\n")
     with_js <- unr_add_js(code=joined,
-                          name=options$label)
+                          name=options$label,
+                          options=options)
     return(with_js)
   }
 }
